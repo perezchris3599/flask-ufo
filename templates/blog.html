@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Welcome to my blog</h2>
+<p>This is a fine blog</p>
+{% if sunny %}
+<p>Today is sunny</p>
+{% else %}
+<p>Its rainy today</p>
+{% endif %}
+
+{% for post in posts %}
+    <h2> {{post.title} </h2>
+    <h3> Author: {{post.author}}</h3>
+{% endfor %}
+{% endblock %}
